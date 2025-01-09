@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SummaryActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:text="Resultado"
+        style="@style/Title"
+        android:textColor="@color/primary_400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Veja o resultado da sua conta"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_title_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor Total"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+    <TextView
+        android:id="@+id/tv_total_table"
+        android:layout_width="0dp"
+        android:layout_height="13dp"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="R$ 250,00" />
+
+    <TextView
+        android:id="@+id/tv_title_num_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pessoas na mesa"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_table"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_table" />
+
+    <TextView
+        android:id="@+id/tv_numPeople"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_num_people"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/tv_title_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porcentagem (%)"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_num_people" />
+
+    <TextView
+        android:id="@+id/tv_Percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_percentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="10%" />
+
+    <TextView
+        android:id="@+id/tv_title_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total + Gorjeta"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_percentage" />
+
+    <TextView
+        android:id="@+id/tv_totalWthTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="R$ 50,00" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_tips" />
+
+    <TextView
+        android:id="@+id/tv_title_tabltips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor da Gorjeta"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_title_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/tv_totaltips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/primary_400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        tools:text="R$ 50,00" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recalcular"
+        android:textSize="20dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
